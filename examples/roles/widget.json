@@ -1,0 +1,7 @@
+{
+  "id": "role-tag",
+  "name": "Role Tag",
+  "srcdoc": "./dist/app.html",
+  "fieldTypes": ["Symbol"],
+  "sidebar": true
+}
