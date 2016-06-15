@@ -13,6 +13,7 @@ the [“Keep a Changelog” format](http://keepachangelog.com/).
     - Expose `api.field.onIsDisabledChanged`. It takes a callback which is fired when the disabled status of the field changes.
     - Expose `api.field.setInvalid`. It can be used to communicate validation status of the field to the Contentful web application.
     - Expose `api.field.type`
+    - Expose `api.entry.field[id].onIsDisabledChanged(locale, handler)`
 
 ### Changed
 
