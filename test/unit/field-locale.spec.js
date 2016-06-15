@@ -72,13 +72,6 @@ describe('FieldLocale', () => {
       })
     })
 
-    describe('.setActive()', () => {
-      it('invokes channel.call("${setActive}", ...)', () => {
-        field.setActive(true)
-        sinon.assert.calledWithExactly(channelStub.call, 'setActive', true)
-      })
-    })
-
     describe('.onValueChanged(handler)', () => {
       testChangeMethod('onValueChanged', info.value)
     })
