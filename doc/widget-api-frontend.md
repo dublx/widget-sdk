@@ -236,7 +236,6 @@ respectively.
 * `space.unarchiveEntry(data)`
 * `space.deleteEntry(data)`
 * `space.getPublishedEntries(query)`
-* `space.getPublishedAssets(query)`
 
 ### Assets
 
