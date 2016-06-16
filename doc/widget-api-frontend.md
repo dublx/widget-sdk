@@ -62,42 +62,7 @@ contentfulWidget.init(function (widget) {
 ## `widget.contentType`
 
 This API gives you access to data about the content type and the entry.
-It has the following shape.
-~~~js
-{
-  "name": "<content type name>",
-  "sys": {
-    "space": {
-      "sys": {
-        "type": "Link",
-        "linkType": "Space",
-        "id": "<space ID>"
-      }
-    },
-    "id": "<content type ID>",
-    "type": "ContentType",
-    "createdAt": "<creation date>",
-    "updatedAt": "<updation date>",
-    "revision": <revision number>
-  },
-  "displayField": "<id of display field>",
-  "fields": [<collection of fields in entry>]
-}
-~~~
-
-Each field in `fields` collection can have the following shape.
-~~~js
-{
-  "id": "<id of field>",
-  "name": "<name of field>",
-  "type": "<type of field. e.g., Symbol, Text, etc>",
-  "localized": <boolean>,
-  "required": <boolean>,
-  "validations": [<validations>],
-  "disabled": <boolean>,
-  "omitted": <boolean>
-}
-~~~
+It has the shape as described under "content type properties" [here](https://www.contentful.com/developers/docs/references/content-management-api/#/reference/content-types).
 
 ## `widget.field`
 
@@ -149,6 +114,7 @@ The method returns a function that can be called to stop listening to changes.
 
 ##### `widget.field.onIsDisabledChanged(cb): function`
 Calls the callback when the disabled status of the field changes.
+A boolean indicating whether the field is disabled or not is passed to the callback.
 
 The method returns a function that can be called to stop listerning to changes.
 
@@ -161,7 +127,8 @@ The current locale of a field the widget is attached to. Yields `"en_US"` in the
 example.
 
 ##### `widget.field.type: string`
-Gives the field type of the widget.
+Holds the type of the field the widget is attached to.
+The field type can be one of the many described [here](https://www.contentful.com/developers/docs/references/content-management-api/#/reference/content-types).
 
 ## `widget.entry`
 
@@ -170,7 +137,7 @@ entry and to get the entry's metadata.
 
 ##### `entry.getSys(): object`
 Returns metadata for an entry. The value coincides with the `sys` value of an
-entry returned by the [Contentful Management API](https://github.com/contentful/contentful-management.js#entry-properties)
+entry returned by the [Contentful Management API](https://github.com/contentful/contentful-management.js/tree/legacy)
 
 ##### `entry.onSysChanged(cb): function`
 Calls the callback with metadata every time that metadata changes. The returned
