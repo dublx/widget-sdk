@@ -177,7 +177,7 @@ The `space` object exposes methods that allow the widget to read and manipulate 
 wide range of objects in the space. Its API mirrors that of the
 [`contentful-management` library][cma-js], with a few differences.
 
-[cma-js]: https://github.com/contentful/contentful-management.js
+[cma-js]: https://github.com/contentful/contentful-management.js/tree/legacy
 
 ### Content Types
 
